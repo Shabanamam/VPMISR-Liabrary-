@@ -1,0 +1,171 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #searchbutton
+        {
+            width: 36px;
+        }
+        *
+        {
+            margin:0 0 0 0px;
+            padding:0;
+        }
+        #keyword
+        {
+            width: 116px;
+        }
+        #myIframe
+        {
+            width: 943px;
+            height: 357px;
+            margin-left: 10px;
+        }
+        .style1
+        {
+            width: 90%;
+        }
+        .style2
+        {
+            width: 366px;
+        }
+        .style3
+        {
+            width: 618px;
+        }
+    .style4
+    {
+        font-family: "Times New Roman", Times, serif;
+        font-size: x-large;
+        text-align: justify;
+    }
+        .style5
+        {
+            font-family: "Times New Roman", Times, serif;
+            text-align: justify;
+        }
+        .style6
+        {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"/>
+    
+    
+    <div id="men div" style="width: 95%; height: auto">
+    <div id="title" 
+        style="width: 99%; height: auto; text-align: center; overflow: hidden;">
+        
+        <table class="style1">
+            <tr>
+                <td class="style2">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:ImageButton ID="ImageButton1" runat="server" Height="181px" 
+                        ImageUrl="~/11.jpg" Width="193px" />
+                </td>
+                <td class="style3">
+                        <strong style="font-family: Arial; font-size: large; color: #000000">
+                        <span>Chh.shahu Institute of Business Education</span>
+                        <span>& Research  Trust Kolhapur’s</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="style16" 
+                            style="font-family: Algerian; font-size: x-large; color: #6600CC">
+                        <br />
+                        V.P. INSTITUTE OF MANAGEMENT STUDIES & RESEARCH, SANGLI.</span>
+                        <span class="style16" 
+                            style="font-family: Algerian; font-size: x-large; color: #6600CC"> STUDIES &amp; RESEARCH, SANGLI.<br />
+                        </span></strong>
+        <span class="style5">
+                        <span class="style6" 
+                            style="font-family: Algerian; color: #6600CC"> 
+                        <strong>
+                        College library</strong></span></span><strong style="font-family: Arial; font-size: large; color: #000000"><span class="style4"><span class="style16" 
+                            style="font-family: Algerian; font-size: x-large; color: #6600CC"> </span></span><br 
+                            class="style15" /> </td></strong>
+                <td>
+                    <asp:ImageButton ID="ImageButton2" runat="server" Height="222px" 
+                        ImageUrl="~/15.jpg" Width="272px" />
+                </td>
+            </tr>
+        </table>
+        
+        <center>
+            <div style="width:979px; height: 64px">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Menu ID="Menu3" runat="server" Font-Bold="False" Font-Names="Verdana" 
+            Font-Size="11pt" Font-Strikeout="False" ForeColor="White" Height="16px" 
+            Orientation="Horizontal" StaticSubMenuIndent="15px" RenderingMode="Table" 
+                Width="75%">
+                    <DynamicHoverStyle BackColor="Silver" Font-Size="11pt" ForeColor="#9933FF" 
+                Width="200px" />
+                    <DynamicMenuItemStyle BackColor="#666666" Font-Overline="False" 
+                ForeColor="White" Width="200px" />
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/home.aspx" Text="HOME" Value="HOME"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/bookragistration.aspx" Text="BOOK RAGISTRATION" 
+                    Value="BOOK RAGISTRATION"></asp:MenuItem>
+                        <asp:MenuItem Text="REGISTER" Value="REGISTER">
+                            <asp:MenuItem NavigateUrl="~/studaddmit.aspx" Text="Student register form" 
+                        Value="Student register form"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Register.aspx" Text="Faculty registration form" 
+                        Value="Faculty registration form"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Book Transaction.aspx" Text="BOOK TRANSACTION" 
+                    Value="BOOK TRANSACTION">
+                            <asp:MenuItem Text="ISSUE" Value="ISSUE" NavigateUrl="~/issue.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="RETURN" 
+                        Value="RETURN" NavigateUrl="~/bookreturnaspx.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Report.aspx" Text="REPORT" 
+                    Value="REPORT">
+                            <asp:MenuItem Text="Searchbook" Value="Searchbook" 
+                        NavigateUrl="~/multiview.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/reports.aspx" Text="Feedback Report" 
+                        Value="Feedback Report"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/bookreport.aspx" Text="Book Report" 
+                        Value="Book Report"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/memreport.aspx" Text="Member report" 
+                        Value="Member report"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/issuereport.aspx" Text="Issue report" 
+                        Value="Issue report"></asp:MenuItem>
+                            <asp:MenuItem Text="Fine report" Value="Fine report"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/studreport.aspx" Text="Book return report" 
+                        Value="Book return report"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Feedback.aspx" Text="FEEDBACK" 
+                    Value="FEEDBACK"></asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BackColor="Silver" ForeColor="#9933FF" />
+                    <StaticMenuItemStyle HorizontalPadding="35px" VerticalPadding="5px" 
+                BackColor="Gray" />
+                </asp:Menu>
+            </div>
+        
+        </div>
+       <center>
+    <div id="info" 
+        
+            style="padding: 15px; width: 80%; height: auto; text-align: center; overflow: hidden;">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+        
+        </asp:ContentPlaceHolder>    
+    </div></center>
+    <center>
+        <div style="width: 91%; height: 46px; background-color: #999999; overflow: hidden;"></div></center>
+    
+  </div>
+        </form>
+        
+        </body>
+         
+</html>
